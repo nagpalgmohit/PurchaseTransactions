@@ -19,6 +19,7 @@ pytest = "==8.3.3"
 pytz = "==2024.2"
 six = "==1.16.0"
 werkzeug = "==3.0.4"
+jsonschema = "*"
 
 [dev-packages]
 

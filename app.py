@@ -3,7 +3,6 @@ from services.transaction_service import TransactionService
 from validators.transaction_validator import TransactionValidator
 from models.transaction import Transaction
 import os
-from flask_expects_json import expects_json
 from threading import Lock
 
 
