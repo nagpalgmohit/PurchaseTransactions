@@ -32,7 +32,7 @@ file_path = 'purchases.txt'
 
 
 @app.route('/savetxn', methods=['POST'])
-def save_txn():
+def save_txt():
     data = request.json
     valid, error_message = TransactionValidator.validate_json(data, error_messages, schema)
     if not valid:
@@ -66,9 +66,9 @@ def save_txn():
         abort(500, description=message)
 
 
-# GET-only endpoint to retrieve transactions based on a value
+
 @app.route('/gettxn/<value>', methods=['GET'])
-def get_txn(value):
+def get_txt(value):
     service = TransactionService(file_path)
     try:
         results, error = service.get_transactions(value, file_lock)
