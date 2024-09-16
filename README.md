@@ -14,9 +14,8 @@ This project implements a RESTful API using Flask for managing purchase transact
 3. **File-based Storage:** Transactions are stored in purchases.txt.
 
 **Usage**
-1. **Save Transaction**
-Saves a new transaction to the purchases.txt file.
-
+1. **Save Transaction**  
+Saves a new transaction to the purchases.txt file.  
 POST http://127.0.0.1:5000/savetxn  
 Content-Type: application/json  
 
@@ -24,7 +23,8 @@ Content-Type: application/json
     "username": "xyz",  
     "item_id": 101,  
     "purchase_price": 59.99  
-}  
+}
+
 Validation Criteria:
 1. JSON Schema: Validates incoming JSON data against a predefined schema,
 2. Username: Alphanumeric, alphabets, or email format. No spaces or digits-only allowed.
@@ -37,11 +37,11 @@ xyz,101,59.99
 2. **Retrieve Transaction**  
 Fetches transactions based on the given username, item_id, or purchase_price.  
 GET http://127.0.0.1:5000/gettxn/<value>  
-You can provide one of the following values: username, item_id, or purchase_price. 
+You can provide one of the following values: username, item_id, or purchase_price.  
 Example:  
 GET http://127.0.0.1:5000/gettxn/xyz  
 GET http://127.0.0.1:5000/gettxn/101  
-GET http://127.0.0.1:5000/gettxn/59.99
+GET http://127.0.0.1:5000/gettxn/59.99  
 Any of the above will return the below JSON object:  
 [  
 {  
@@ -59,5 +59,5 @@ Any of the above will return the below JSON object:
 5. To run tests: export PYTHONPATH=$(pwd)  
 pipenv run pytest
 
-**Limitations**
+**Limitations**  
 Authentication and authorization are not implemented in this version.
