@@ -28,7 +28,7 @@ class TransactionValidator:
         if re.match(pattern, str("{:.2f}".format(float(purchase_price)))):
             return True, None
         else:
-            return False, "The purchase price must adhere to the following criteria: It can consist of only positive digits with decimals. It cannot consist of negatives, or zero."
+            return False, "The purchase price must adhere to the following criteria: It can consist of only positive digits with decimals. It cannot consist of negatives or zero."
     
     @staticmethod
     def validate_json(data, error_messages,schema):
