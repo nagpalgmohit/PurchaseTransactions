@@ -1,5 +1,5 @@
 # PurchaseTransactions
-This project implements a RESTful API using Flask for managing purchase transactions. The API allows users to save and retrieve purchase transaction data such as username, item_id, and purchase_price. The system stores transaction records in a local text file (purchases.txt) and supports validation for the input data. Authentication and authorization is not in the scope of the project.
+This project implements a RESTful API using Flask for managing purchase transactions. The API allows users to save and retrieve purchase transaction data such as username, item_id, and purchase_price. The system stores transaction records in a local text file (purchases.txt) and supports validation for the input data. Authentication and authorization are not in the scope of the project.
 
 **Features**
 1. **Save Transaction:** Allows users to save a purchase transaction with validation for username, item_id, and purchase_price.
@@ -40,10 +40,18 @@ xyz,101,59.99
 Retrieve transactions based on the given username, item_id, or purchase_price.  
 GET http://127.0.0.1:5000/gettxn/<value>  
 You can provide one of the following values: username, item_id, or purchase_price. A search will be conducted in the purchases.txt file, and all matching entries will be returned.  
-Example:
+Example:  
 GET http://127.0.0.1:5000/gettxn/xyz  
 GET http://127.0.0.1:5000/gettxn/101  
-GET http://127.0.0.1:5000/gettxn/59.99  
+GET http://127.0.0.1:5000/gettxn/59.99
+Any of the above will return the below JSON object:  
+[  
+{  
+    "username": "xyz",  
+    "item_id": 101,  
+    "purchase_price": 59.99  
+} 
+]  
 
 **Installation on macOS**
 1. Clone repository: git clone https://github.com/nagpalgmohit/PurchaseTransactions.git
