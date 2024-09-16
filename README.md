@@ -1,5 +1,5 @@
 # PurchaseTransactions
-This project implements a RESTful API using Flask for managing purchase transactions. The API allows users to save and retrieve purchase transaction data such as username, item_id, and purchase_price. The system stores transaction records in a local text file (purchases.txt) and supports validation for the input data. Authentication and authorization are not in the scope of the project.
+This project implements a RESTful API using Flask for managing purchase transactions. The API allows users to save and retrieve purchase transaction data such as username, item_id, and purchase_price. The system stores transaction records in a local text file (purchases.txt) and supports validation for the input data. A Pipfile and Pipfile.lock have been included, to ensure all dependencies are properly managed. These files ensure that the necessary packages are installed and version-controlled. Authentication and authorization are not in the scope of the project.
 
 **Features**
 1. **Save Transaction:** Allows users to save a purchase transaction with validation for username, item_id, and purchase_price.
@@ -50,7 +50,7 @@ Any of the above will return the below JSON object:
     "username": "xyz",  
     "item_id": 101,  
     "purchase_price": 59.99  
-} 
+}  
 ]  
 
 **Installation on macOS**
